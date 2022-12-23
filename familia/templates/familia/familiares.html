@@ -9,12 +9,14 @@
 <body>
 
     <h1>Lista de mis familiares</h1>
-
-    {% for familiar in lista_familiares %}
-        <ul>
-            <li>Id{{familiar.id}} Nombre: {{familiar.nombre}}, Dirección: {{familiar.direccion}}, Pasaporte: {{familiar.numero_pasaporte}} </li>
-        </ul>
+    {% extends 'familia/base.html' %}
+        {% block titulo%} Lista de todos mis Familiares {% endblock %}
+        {% block contenido %}
+            {% for familiar in lista_familiares %}
+                <ul>
+                    <li>Id{{familiar.id}} Nombre: {{familiar.nombre}}, Dirección: {{familiar.direccion}}, Pasaporte: {{familiar.numero_pasaporte}} </li>
+                </ul>
     {% endfor %}
-    
+        {% endblock %}
 </body>
 </html>

@@ -1,0 +1,11 @@
+{% extends 'ProyectoFinalCoder/base.html' %}
+
+{% block contenido %}
+
+    <form method = "POST">
+        {% csrf_token %}  
+        {{form.as_p}}
+        <input type = "Submit" value = "Postear">
+    </form>
+
+{%endblock%}
